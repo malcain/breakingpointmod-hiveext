@@ -866,6 +866,7 @@ Sqf::Value Database::fetchCharacterDetails(int characterID)
 				statsArr[1] = i;
 				i = rs[4].convert<int>();
 				statsArr[2] = i;
+				stats = lexical_cast<Sqf::Value>(statsArr);
 			}
 			catch (boost::bad_lexical_cast)
 			{
